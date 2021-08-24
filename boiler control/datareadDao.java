@@ -19,13 +19,13 @@ import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import java.lang.*;
 
 public class datareadDao {
-//	private ComboPooledDataSource source;
+
 	private JdbcTemplate jdbcTemp;
 	public void setjdbcTemp(JdbcTemplate jdbcTemp) {
 		this.jdbcTemp=jdbcTemp;
 	}
 	public datareadDao(JdbcTemplate jdbcTemp) {
-		// TODO Auto-generated constructor stub
+
 		this.jdbcTemp=jdbcTemp;
 	}
 	public datareadDao() {}

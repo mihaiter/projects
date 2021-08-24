@@ -48,7 +48,7 @@ public class servertest {
 			PrintWriter output = new PrintWriter(link.getOutputStream(), true);
 
 			output.println(command);
-			// System.out.println("sent command");
+		
 			String message = "";
 
 		} catch (IOException e) {
@@ -64,16 +64,10 @@ public class servertest {
 			 System.out.println("beans after");  
 			 dread=(datareadDao)context.getBean("ddao");
 			
-	//	 res=new ClassPathResource("servertest/applicationContext.xml");
-		//	 bfact= new XmlBeanFactory(res);
-			 
+	
 			 
 		}catch(Exception e) {System.out.println("xml not found");e.printStackTrace();}
-		// try {
-		// SecurityManager sm=System.getSecurityManager();
-		// System.out.println("testing for listening on port "+PORT);
-		// sm.checkListen(PORT);
-		// }catch(SecurityException e) {e.printStackTrace();}
+		
 		
 		try {
 		
@@ -115,27 +109,12 @@ public class servertest {
 			}).start();
 			
 			while (ok) {
-				// System.out.println("starting task");
-				// t.schedule(tsk, 3);
-
-				// }
-				// t.start();
-				// System.out.println("loop");
-				// System.out.println("insert mesage");
-				// if (sc.hasNext()) {
-				// System.out.println("sending from input");
-				// String insc = sc.next();
-				//
-				// output.println(insc);
-				// System.out.println("sent");
-				// }
-				// System.out.println("reading ");
+				
 				if (input.hasNext()) {
-					// System.out.println("before reading");
+				
 					message = input.nextLine();
 					
-					// System.out.println("reading");
-					// System.out.println("mesage received");
+					
 					temperature = Float.parseFloat(message);
 					 try {
 				dread.saveData(new dataread(temperature,System.currentTimeMillis()));
@@ -143,7 +122,7 @@ public class servertest {
 					
 				}
 
-				// System.out.println("ok state " + ok);
+				
 
 				nmessages++;
 
@@ -163,7 +142,7 @@ public class servertest {
 				connected=false;
 				System.out.println("closing connection");
 				link.close();
-				// input.close();
+			
 			} catch (IOException e) {
 				System.out.println("cannot disconnect" + e);
 			}

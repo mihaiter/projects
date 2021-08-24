@@ -45,13 +45,10 @@ public class drawPanel extends JPanel {
 		
 		long interval=last.getMiliseconds()-first.getMiliseconds();
 		for(dataread da:data) {
-//			System.out.println("interval :"+interval);
-		//	long value=(getminutes( da.getMiliseconds())-getminutes(first.getMiliseconds()))/(getminutes(last.getMiliseconds())
-	//			-getminutes(first.getMiliseconds()))*((long)d.width)+5;
+
 			long l=(da.getMiliseconds()-first.getMiliseconds());
 			long r=(l*(long)60)/interval+(long )20;
-		//	float f= (float)value;
-//			System.out.println(l);
+	
 			
 			g.drawString(".",r,
 					(da.getTemp()-20)*(d.height-10)/60 +20);

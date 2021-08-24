@@ -62,15 +62,13 @@ public class servergui implements ActionListener {
 		panelButoane = new JPanel();
 		GroupLayout gl = new GroupLayout(panelButoane);
 
-		// panel.setLayout(new GroupLayout());
-		// panel.add(templabel);
-		// panel.add(temtf);
+	
 		Font font = new Font("Monospace", Font.BOLD, 28);
 		tpa.setFont(font);
 
 		tpa.setForeground(Color.RED);
 		tpa.setBackground(Color.BLACK);
-		// panel.add(tpa);
+		
 		icon1Green = new ImageIcon(this.getClass().getClassLoader()
 				.getResource("servertest/led-green.png"));
 		icon2Red = new ImageIcon(this.getClass().getClassLoader()
@@ -79,7 +77,7 @@ public class servergui implements ActionListener {
 				.getResource("servertest/on.png"));
 		off = new ImageIcon(this.getClass().getClassLoader()
 				.getResource("servertest/off.png"));
-		// panel.add(buttonTemp);
+		
 
 		buttonpump1.setIcon(off);
 		buttonpump1.setActionCommand("pompa1");
@@ -96,9 +94,9 @@ public class servergui implements ActionListener {
 		buttonpump2.setFocusPainted(false);
 		buttonpump2.setBorderPainted(false);
 
-		// panel.add(buttonpump2);
+		
 		imagelabel.setIcon(icon2Red);
-		// panel.add(imagelabel);
+		
 
 		gl.setAutoCreateContainerGaps(true);
 		gl.setAutoCreateGaps(true);
@@ -123,8 +121,7 @@ public class servergui implements ActionListener {
 						.addComponent(pompa2label))
 				.addGap(3, 5, 8).addGroup(gl.createParallelGroup()
 						.addComponent(buttonpump1).addComponent(buttonpump2)));
-		// gl.linkSize(templabel,tpa,pompa1label,buttonpump1);
-		// panel.setSize(800, 800);
+		
 		panelButoane.setLayout(gl);
 		panelButoane.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
 		panelGrafic.setBorder(BorderFactory.createLineBorder(Color.blue, 5));
@@ -134,10 +131,10 @@ public class servergui implements ActionListener {
 		
 		frame.add(panelButoane, BorderLayout.WEST);
 		frame.add(panelGrafic, BorderLayout.CENTER);
-		// frame.setSize(new Dimension(500,500));
+		
 		frame.setSize(new Dimension(600, 300));
 		frame.setResizable(true);
-		// frame.set
+	
 		frame.setVisible(true);
 		if (!SystemTray.isSupported()) {
 			System.out.println("not suported");
@@ -146,7 +143,7 @@ public class servergui implements ActionListener {
 			d = tray.getTrayIconSize();
 		}
 
-		// tpa.sett
+	
 		ActionListener updatetemp = new ActionListener() {
 
 			@Override
@@ -260,22 +257,16 @@ public class servergui implements ActionListener {
 		return image;
 	}
 	void updateTemp() {
-		// Font font=new Font("Monospace",Font.BOLD,28) ;
-		// tpa.setFont(font);
-		// tpa.setForeground(Color.RED);
-		// tpa.setBackground(Color.BLACK);
+		
 		tpa.setText(Float.toString(servertest.temperature));
-		// String text=Float.toHexString(servertest.temperature);
-		// tray.add();
-		// System.out.println("updating temp");
-		// Graphics g= frame.getGraphics();
+
 		Component c = panelButoane.getComponent(0);
 
 		Image i = c.createImage(20, 20);
 		i.getGraphics().setColor(Color.BLUE);
 		i.getGraphics().drawString("0 0 ", 0, 0);
 
-		// panel.add(c)
+		
 	}
 
 	@Override

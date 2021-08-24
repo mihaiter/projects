@@ -37,26 +37,4 @@ public class dataThrowing {
 	   }
 	}
 
-/*
-import org.springframework.aop.ThrowsAdvice;
-public class dataThrowing implements ThrowsAdvice{
-	FileOutputStream fo;
-	String file,path;
-	PrintWriter out;
-	public void  afterThrowing(Exception e) throws IOException {
-		try {
-			fo=new FileOutputStream("servertest/log.txt",true);
-			out= new PrintWriter(fo);
-			out.println(e.getMessage());
-		}catch(Exception ex) {
-			e.printStackTrace();
-		}
-		finally {
-			out.close();
-			fo.close();
-		}
-		// TODO Auto-generated constructor stub
-	}
 
-}
-*/
