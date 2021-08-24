@@ -130,16 +130,7 @@ void testdata() {
     client.println("hello from ESP8266");
     delay(300);
     }
-//
-//    client.println("hello from ESP8266");
-//    delay(300);
-//    
-//    client.println("hello from ESP8266");
-//    delay(300);
-//    client.println("hello from ESP8266");
-//    delay(300);
-//    client.println("hello from ESP8266");
-//    delay(300);
+
   }
 }
 void readdata() {
