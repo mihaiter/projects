@@ -8,8 +8,8 @@
 #ifndef STASSID
 //#define STASSID "your-ssid"
 //#define STAPSK  "your-password"
-#define STASSID "Orange-DGT7-2.4G"
-#define STAPSK  "2n26VYBA"
+#define STASSID "*********"
+#define STAPSK  "*********"
 #endif
 #define vref 3.3
 #define beta 4200
