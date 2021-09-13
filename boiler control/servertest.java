@@ -87,7 +87,7 @@ public class servertest {
 			String message = "";
 			Scanner sc = new Scanner(System.in);
 			boolean ok = true;
-			System.out.println("before loop");
+		
 			output.println("beginning connection");
 		
 			

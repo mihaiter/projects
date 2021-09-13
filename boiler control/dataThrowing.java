@@ -9,7 +9,7 @@ public class dataThrowing {
 	      * before a selected method execution.
 	   */
 	   public void beforeAdvice(){
-	      System.out.println("Going to setup student profile.");
+	      
 	   }
 	   
 	   /** 
@@ -17,7 +17,7 @@ public class dataThrowing {
 	      * after a selected method execution.
 	   */
 	   public void afterAdvice(){
-	      System.out.println("Student profile has been setup.");
+	     
 	   }
 
 	   /** 
